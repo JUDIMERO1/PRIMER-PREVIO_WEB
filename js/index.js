@@ -1,7 +1,7 @@
 
 const formulario = document.getElementById('login');
 formulario.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent form submission
+    event.preventDefault(); 
 
     const codigoEstudiante = document.querySelector("#code").value;
     const claveEstudiante = document.querySelector("#password").value;
