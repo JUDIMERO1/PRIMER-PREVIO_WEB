@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Notas</title>
+    <link rel="stylesheet" href="css/notas.css">
+</head>
+
+<body>
+    <div class="container">
+        <img src="img/Imagen de WhatsApp 2024-04-21 a las 20.59.42_7510a45d.jpg" alt="Logo ufps" width="500">
+
+        <h1>Bienvenido <span id="name"></span></h1>
+        <label for="nombre" >Codigo</label>
+        <input value="" type="text" id="codigo" name="codigo" placeholder="codigo" />
+        <br>
+        <label for="apellido">Nombre</label>
+        <input value="" type="text" id="nombre" name="nombre" placeholder="nombre" />
+        <br>
+        <p class="promedio">Promedio ponderado: <span id="promedio"></span></p>
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Asignatura</th>
+                    <th>Créditos</th>
+                    <th>P1</th>
+                    <th>P2</th>
+                    <th>P3</th>
+                    <th>EF</th>
+                    <th>Definitiva</th>
+                </tr>
+            </thead>
+            <tbody id="notas"></tbody>
+        </table>
+        <button id="logout">Cerrar sesión</button>
+    </div>
+    <script src="js/notas.js"></script>
+</body>
+
+</html>
