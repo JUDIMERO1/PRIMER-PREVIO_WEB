@@ -31,7 +31,7 @@ function loginUsuario(codigoEstudiante, claveEstudiante) {
         .then(user => {
             if (user.login) {
                 console.log('Login exitoso:', user.mensaje);
-                localStorage.setItem('usuario', JSON.stringify(user));
+                localStorage.setItem('user', JSON.stringify(user));
                 alert('Bienvenido ' + user.nombre);
                 window.location.href = "notas.html";
             } else {
