@@ -22,6 +22,7 @@ window.addEventListener('load', function () {
                 var tbody = document.querySelector('tbody');
 
                 data.notas.forEach(nota => {
+                  
                     var row = document.createElement('tr');
                     var asignaturaCell = document.createElement('td');
                     var creditosCell = document.createElement('td');
@@ -37,7 +38,7 @@ window.addEventListener('load', function () {
                     n2Cell.textContent = nota.n2;
                     n3Cell.textContent = nota.n3;
                     exCell.textContent = nota.ex;
-                    defCell.textContent = ((parseFloat(nota.n1) + parseFloat(nota.n2) + parseFloat(nota.n3) + parseFloat(nota.ex)) / 4).toFixed(2); // Calcula el promedio
+                    defCell.textContent = ((parseFloat(nota.n1) + parseFloat(nota.n2) + parseFloat(nota.n3) + parseFloat(nota.ex)) / 4).toFixed(2); // Calcular definitiva
 
                     row.appendChild(asignaturaCell);
                     row.appendChild(creditosCell);
