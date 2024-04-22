@@ -12,9 +12,9 @@ window.addEventListener('load', function () {
     document.getElementById('codigoes').textContent = data.codigo;
     document.getElementById('nombrees').textContent = data.nombre;
 
-    var api = 'https://24a0dac0-2579-4138-985c-bec2df4bdfcc-00-3unzo70c406dl.riker.replit.dev/students/' + data.codigo + '/notas';
+    var consumirAPI = 'https://24a0dac0-2579-4138-985c-bec2df4bdfcc-00-3unzo70c406dl.riker.replit.dev/students/' + data.codigo + '/notas';
 
-    fetch(api)
+    fetch(consumirAPI)
 
         .then(response => response.json())
         .then(data => {
@@ -22,7 +22,6 @@ window.addEventListener('load', function () {
                 var tbody = document.querySelector('tbody');
 
                 data.notas.forEach(nota => {
-                  
                     var row = document.createElement('tr');
                     var asignaturaCell = document.createElement('td');
                     var creditosCell = document.createElement('td');
@@ -38,7 +37,7 @@ window.addEventListener('load', function () {
                     n2Cell.textContent = nota.n2;
                     n3Cell.textContent = nota.n3;
                     exCell.textContent = nota.ex;
-                    defCell.textContent = ((parseFloat(nota.n1) + parseFloat(nota.n2) + parseFloat(nota.n3) + parseFloat(nota.ex)) / 4).toFixed(2); // Calcular definitiva
+                    defCell.textContent = ((parseFloat(nota.n1) + parseFloat(nota.n2) + parseFloat(nota.n3) + parseFloat(nota.ex)) / 4).toFixed(2); // Calcular defi
 
                     row.appendChild(asignaturaCell);
                     row.appendChild(creditosCell);
