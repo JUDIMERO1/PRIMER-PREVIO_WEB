@@ -7,7 +7,7 @@ formulario.addEventListener('submit', (event) => {
     const claveEstudiante = document.querySelector("#password").value;
 
     if (codigoEstudiante === '' || claveEstudiante === '') {
-        console.log= 'Por favor, ingrese todas las credenciales.';
+        alert('Por favor, ingrese todas las credenciales.');
         return;
     }
 
@@ -33,7 +33,7 @@ function loginUsuario(codigoEstudiante, claveEstudiante) {
                 console.log('Login exitoso:', user.mensaje);
                 localStorage.setItem('usuario', JSON.stringify(user));
                 alert('Bienvenido ' + user.nombre);
-                window.location.href = "pages/notas.html";
+                window.location.href = "notas.html";
             } else {
                 alert(user.mensaje);
             }
